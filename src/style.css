@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,14 +23,18 @@ a:hover {
 }
 
 body {
+  font-family: Arial, sans-serif;
+  width: 100%;
   margin: 0;
-  display: flex;
+  margin: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: #333;
 }
 
 h1 {
+  color: #fff;
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -43,14 +47,15 @@ h1 {
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  padding: 0.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
@@ -63,7 +68,7 @@ h1 {
   color: #888;
 }
 
-button {
+.btn {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -74,11 +79,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.btn {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.btn:focus,
+.btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -94,3 +99,121 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITY */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+}
+
+.nav {
+  position:absolute;
+  top:25px;
+
+  flex-direction:row;
+  justify-content: space-between;
+
+  min-width:80vw;
+  border-radius: 50px;
+  padding: 0 20px;
+
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a {
+text-wrap: nowrap;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 3. Hero Section */
+.hero {
+    background: url('/background1.png') center/cover no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('background1.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+/* 4. Protocols Section */
+.protocols {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.protocols h2 span {
+    color: red;
+}
+
+/* 5. Consultation Form */
+.consultation {
+    background: #00274d;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.consultation form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.consultation input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* 6. Footer */
+footer {
+    background: #eee;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.nav {
+    /* position:absolute; */
+    /* top: 0; */
+    /* left: 30%; */
+    background: #ffffff;
+}
+
+.hero {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.protocols,
+.consultation,
+footer {
+    width: 100%;
+    max-width: 1200px; /* Keeps content constrained */
+    margin: 0 auto;
+}
+ /* Utility */
+
