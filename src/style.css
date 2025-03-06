@@ -21,7 +21,7 @@ body {
   background: var(--bg);
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   width: 100%;
   margin: 0;
@@ -146,7 +146,6 @@ p span {
 text-wrap: nowrap;
     text-decoration: none;
     color: var(--main);
-    font-weight: bold;
 }
 
 /* 4. Protocols Section */
