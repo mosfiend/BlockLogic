@@ -2,11 +2,9 @@
 
 :root {
   --main: #000D59;
+  --secondary: #D94948;
   --bg: #f5f5f5;
-  line-height: 1.5;
   font-weight: 400;
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +15,6 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -37,10 +32,19 @@ body {
   color: #333;
 }
 
+header, section, footer {  
+  background: #f5f5f5;
+}
+
 h1 {
   color: #fff;
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+p {
+  font-size: 20px;
+  line-height:1.2
 }
 
 #app {
@@ -51,19 +55,12 @@ h1 {
 }
 
 .logo {
-  background: #ffffff;
   padding: 0.5em;
   will-change: filter;
   transition: filter 300ms;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
 
 .card {
   padding: 2em;
@@ -73,38 +70,23 @@ h1 {
   color: #888;
 }
 
-.btn {
-  border-radius: 8px;
-  border: 1px solid transparent;
+button {
+  background: var(--secondary);
+  border-radius: 500px;
+  border: none;
+color: #ffffff;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.btn {
-  border-color: #646cff;
-}
-.btn:focus,
-.btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+input {
+  border-radius: 500px;
+  border: none;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
 
 * {
     margin: 0;
@@ -121,10 +103,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns:1fr 1fr;
 }
-
-
 
 .hero {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/background1.png') center/cover no-repeat;
@@ -178,12 +157,39 @@ text-wrap: nowrap;
 }
 
 .protocols h2 span {
-    color: red;
+    color: var(--secondary);
+}
+
+.protocol-text {
+  padding-right: 5vw;
+  padding-left: 5vw;
+  padding-bottom:100px;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
+  text-align:left;
+}
+
+.foot-note {
+font-size: 9px;
+align-self:end;
+}
+
+.logos {
+padding: 25px 5vw ;
+background: #ffffff;
+border-radius:40px;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap:20px;
+}
+
+.defi-protocols {
+grid-column: 1/5;
 }
 
 /* 5. Consultation Form */
 .consultation {
     background: #00274d;
+border-radius:40px;
     color: white;
     padding: 3rem 2rem;
     text-align: center;
@@ -199,8 +205,6 @@ text-wrap: nowrap;
 .consultation input {
     padding: 10px;
     width: 200px;
-    border-radius: 5px;
-    border: none;
 }
 
 /* 6. Footer */
