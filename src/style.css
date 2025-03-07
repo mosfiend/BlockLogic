@@ -56,8 +56,9 @@ p {
 
 .logo {
   padding: 0.5em;
-  will-change: filter;
-  transition: filter 300ms;
+}
+.logo img {
+  width: 200px; /* Adjust as needed */
 }
 
 .card {
@@ -68,11 +69,12 @@ p {
   color: #888;
 }
 
+
 button {
   background: var(--secondary);
   border-radius: 500px;
   border: none;
-color: #ffffff;
+  color: #ffffff;
   padding: 12px 35px;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -84,6 +86,10 @@ input {
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+h2 span {
+    color: var(--secondary);
 }
 
 p span {
@@ -129,19 +135,18 @@ p span {
 .nav {
   position:absolute;
   top:25px;
-
   flex-direction:row;
   justify-content: space-between;
-
-  min-width:80vw;
+  width:60vw;
   border-radius: 50px;
   padding: 0 20px;
-  margin-left:10vw;
+  margin-left:20vw;
 }
 
 .nav ul {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 0px;
     list-style: none;
 }
 
@@ -149,6 +154,9 @@ p span {
 text-wrap: nowrap;
     text-decoration: none;
     color: var(--main);
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* 4. Protocols Section */
@@ -261,8 +269,61 @@ footer {
   position: absolute;
   left: 10vw;
   top: 150px;
-  font-weight:500;
+  font-weight:400;
   text-align: left;
-  max-width: 400px;
-  font-size: 2em;
+  max-width: 145px;
+  font-size: 30px;
+}
+
+.active {
+  background: var(--secondary);
+  border-radius: 500px;
+  border: none;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.active a {
+  color: #ffffff;
+}
+
+/* Products Page */
+.mission {
+padding: 25px 5vw ;
+background: var(--secondary);
+color: #ffffff;
+border-radius:40px;
+grid-template-columns: 1fr 2fr;
+justify-content: space-between;
+text-align:left;
+
+}
+.mission h3 {
+flex: 0 0 auto; /* Prevent shrinking */
+font-size: 30px;
+font-weight: 800;
+}
+
+
+.mission h4 {
+font-weight: 700;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: -2%;
+vertical-align: middle;
+}
+
+.mission p {
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -2%;
+vertical-align: middle;
+
+}
+
+@media (max-width: 600px) { /* Adjust width as needed */
+    .logo {
+        display: none;
+    }
 }
